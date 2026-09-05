@@ -713,12 +713,43 @@ class ProcessBuilder {
      * @param {string} tempNativePath The path to store the native libraries.
      * @returns {{[id: string]: string}} An object containing the paths of each library mojang declares.
      */
+    _resolveNativeLibrarySubpath(){
+        const PREFIX = '-Djava.library.path='
+        const TOKEN = '${natives_directory}'
+        const jvmArgs = this.vanillaManifest.arguments != null ? this.vanillaManifest.arguments.jvm : null
+        if(jvmArgs != null){
+            for(const arg of jvmArgs){
+                if(typeof arg === 'string' && arg.startsWith(PREFIX)){
+                    const value = arg.substring(PREFIX.length)
+                    const idx = value.indexOf(TOKEN)
+                    if(idx > -1){
+                        return value.substring(idx + TOKEN.length).replace(/^[/\\]+/, '')
+                    }
+                }
+            }
+        }
+        return ''
+    }
+
+    /**
+     * Resolve the libraries defined by Mojang's version data. This method will also extract
+     * native libraries and point to the correct location for its classpath.
+     *
+     * @param {string} tempNativePath The path to store the native libraries.
+     * @returns {{[id: string]: string}} An object containing the paths of each library mojang declares.
+     */
     _resolveMojangLibraries(tempNativePath){
         const nativesRegex = /.+:natives-([^-]+)(?:-(.+))?/
         const libs = {}
 
         const libArr = this.vanillaManifest.libraries
         fs.ensureDirSync(tempNativePath)
+
+        // 네이티브를 어디에 풀지는 매니페스트가 정한다. 버전마다 다르다 —
+        // 26.2 는 -Djava.library.path=${natives_directory}/java 로 java/ 하위를 기대하고,
+        // 26.1.2 는 ${natives_directory} 로 루트를 기대한다. 어느 한쪽으로 하드코딩하면
+        // 반대쪽이 'Failed to locate library: lwjgl.dll' 로 반드시 죽는다.
+        const nativeTargetPath = path.join(tempNativePath, this._resolveNativeLibrarySubpath())
         for(let i=0; i<libArr.length; i++){
             const lib = libArr[i]
             if(isLibraryCompatible(lib.rules, lib.natives)){
@@ -801,13 +832,10 @@ class ProcessBuilder {
 
                         // Extract the file.
                         if(!shouldExclude){
-                            // MC 26.x 매니페스트는 -Djava.library.path=${natives_directory}/java 로
-                            // java/ 하위를 기대한다. 원본처럼 루트에 평평하게 풀면 게임이 lwjgl 을
-                            // 못 찾고 'Failed to locate library: lwjgl.dll' 로 죽는다.
-                            const javaNativePath = path.join(tempNativePath, 'java')
-                            fs.ensureDirSync(javaNativePath)
-                            // 비동기로 쓰면 추출이 끝나기 전에 게임 프로세스가 스폰돼 같은 크래시가 난다.
-                            fs.writeFileSync(path.join(javaNativePath, extractName), zipEntries[i].getData())
+                            fs.ensureDirSync(nativeTargetPath)
+                            // 비동기로 쓰면 추출이 끝나기 전에 게임 프로세스가 스폰돼
+                            // 'Failed to locate library: lwjgl.dll' 로 죽는다.
+                            fs.writeFileSync(path.join(nativeTargetPath, extractName), zipEntries[i].getData())
                         }
 
                     }

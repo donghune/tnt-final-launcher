@@ -74,8 +74,11 @@ git tag v1.0.1 && git push origin v1.0.1
 1. `app/assets/js/distromanager.js` — `REMOTE_DISTRO_URL` → 이 레포의 raw URL
 2. `app/assets/js/configmanager.js` — natives 폴더 `TntNatives`, 데이터 폴더 `.tntfinallauncher`
    (다른 런처와 갈라야 서로의 mods 폴더를 안 덮어쓴다)
-3. `app/assets/js/processbuilder.js` — MC 26.x 네이티브를 `natives/java/` 하위로 추출 + 동기 write
-   (원본대로면 `Failed to locate library: lwjgl.dll` 로 크래시)
+3. `app/assets/js/processbuilder.js` — 네이티브 추출 경로를 **매니페스트에서 읽어** 결정 + 동기 write
+   - 버전마다 다르다. 26.2 는 `-Djava.library.path=${natives_directory}/java` 로 `java/` 하위를,
+     26.1.2 는 `${natives_directory}` 로 루트를 기대한다. 어느 한쪽으로 하드코딩하면
+     반대쪽이 `Failed to locate library: lwjgl.dll` 로 반드시 죽는다.
+   - 비동기로 쓰면 추출이 끝나기 전에 게임이 스폰돼 같은 크래시가 난다.
 4. `index.js` + `app/assets/js/scripts/uibinder.js` — `distributionIndexDone` 이벤트 재전송
    (배포망 응답이 빠르면 렌더러가 이벤트를 놓쳐 **로딩 화면에서 영원히 멈춘다**)
 5. `electron-builder.yml` / `package.json` — 앱 이름·아이디·아티팩트명
