@@ -1,0 +1,20 @@
+# TNT 게임 런처 브랜딩. HeliosLauncher 원본의 WesterosCraft 문구를 대체한다.
+
+[ejs.app]
+title = "TNT Launcher"
+
+[ejs.landing]
+mediaGitHubURL = "https://github.com/donghune/tnt-final-launcher"
+mediaXURL = "#"
+mediaInstagramURL = "#"
+mediaYouTubeURL = "#"
+mediaDiscordURL = "#"
+
+[ejs.settings]
+sourceGithubLink = "https://github.com/donghune/tnt-final-launcher"
+supportLink = "https://github.com/donghune/tnt-final-launcher/issues"
+
+[ejs.welcome]
+welcomeHeader = "후니버스 티엔티게임"
+welcomeDescription = "한글날 특집 파이널. 경기장에 블럭을 채우고, 블럭을 놓다 얻은 자음·모음으로 지정된 문장을 완성하세요. 도네이션이 들어오면 TNT가 떨어지고, 낚시 감옥·99초 미션·랜덤 점프맵·공습경보가 발동합니다."
+welcomeDescCTA = "플레이를 누르면 바로 접속됩니다."

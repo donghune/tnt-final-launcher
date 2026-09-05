@@ -1,0 +1,6 @@
+{
+  "$schema": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/schemas/DistroMetaSchema.schema.json",
+  "meta": {
+    "rss": "https://github.com/donghune/tnt-final-launcher/releases.atom"
+  }
+}

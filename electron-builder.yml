@@ -1,0 +1,52 @@
+appId: 'tntlauncher'
+productName: 'TNT Launcher'
+# ASCII 고정 — productName 에 공백이 있어 릴리스 자산 URL 이 %20 으로 깨진다.
+artifactName: 'tnt-final-launcher-setup-${version}.${ext}'
+
+copyright: '후니버스 티엔티게임'
+
+asar: true
+compression: 'maximum'
+
+files:
+  - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,eslint.config.mjs}'
+
+extraResources:
+  - 'libraries'
+
+# Windows Configuration
+win: 
+  target: 
+    - target: 'nsis'
+      arch: 'x64'
+
+# Windows Installer Configuration
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+
+# macOS Configuration
+mac:
+  target:
+    - target: 'zip'
+      arch:
+        - 'x64'
+        - 'arm64'
+  artifactName: 'tnt-final-launcher-setup-${version}-${arch}.${ext}'
+  category: 'public.app-category.games'
+
+# Linux Configuration
+linux: 
+  target: 'AppImage'
+  maintainer: 'donghune'
+  vendor: 'donghune'
+  synopsis: 'TNT 게임 파이널 런처'
+  description: '후니버스 티엔티게임 파이널 전용 런처. 클라이언트 모드를 자동으로 설치·갱신한다.'
+  category: 'Game'
+
+
+directories:
+  buildResources: 'build'
+  output: 'dist'

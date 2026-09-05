@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/schemas/ServerMetaSchema.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "name": "TNT 게임 파이널",
+    "description": "후니버스 티엔티게임 한글날 특집 (MC 26.1.2)",
+    "icon": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/app/assets/images/SealCircle.png",
+    "address": "game.donghune.kr:25572",
+    "mainServer": true,
+    "autoconnect": true,
+    "javaOptions": {
+      "supported": ">=25.x",
+      "suggestedMajor": 25
+    }
+  },
+  "fabric": {
+    "version": "0.19.3"
+  },
+  "untrackedFiles": []
+}
