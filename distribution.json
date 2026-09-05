@@ -110,13 +110,13 @@
           }
         },
         {
-          "id": "com.hunmin:hunmin-client:1.0-SNAPSHOT@jar",
+          "id": "com.hunmin:hunmin-client:1.0.0@jar",
           "name": "Hunmin Event Client",
           "type": "FabricMod",
           "artifact": {
-            "size": 796840,
-            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/hunmin_client-1.0-SNAPSHOT.jar",
-            "MD5": "8864b71a7d445444972056d1cbf16312"
+            "size": 812133,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/hunmin-client-1.0.0.jar",
+            "MD5": "d0005bacf6865c4f597592a840bd8740"
           }
         },
         {
