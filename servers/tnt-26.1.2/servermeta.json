@@ -3,9 +3,9 @@
   "meta": {
     "version": "1.0.0",
     "name": "TNT 게임 파이널",
-    "description": "후니버스 티엔티게임 한글날 특집 (MC 26.1.2)",
+    "description": "후니버스 티엔티게임 한글날 특집 (MC 26.1.2) — 로컬 테스트 서버",
     "icon": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/app/assets/images/SealCircle.png",
-    "address": "game.donghune.kr:25572",
+    "address": "macbookpro.tail3849b5.ts.net:25566",
     "mainServer": true,
     "autoconnect": true,
     "javaOptions": {
