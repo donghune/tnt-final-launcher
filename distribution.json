@@ -110,6 +110,16 @@
           }
         },
         {
+          "id": "generated.fabricmod:fabric-language-kotlin:1.13.13+kotlin.2.4.10@jar",
+          "name": "Fabric Language Kotlin",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 8076363,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
+            "MD5": "b70470268be8c74a10e10b24a2bf7df6"
+          }
+        },
+        {
           "id": "com.hunmin:hunmin-client:1.0.0@jar",
           "name": "Hunmin Event Client",
           "type": "FabricMod",
@@ -130,6 +140,16 @@
           }
         },
         {
+          "id": "org.example.hoon:rabbitboss:1.0-26.1.2@jar",
+          "name": "RabbitBoss",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 931831,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/RabbitBoss-26.1.2-1.0-26.1.2.jar",
+            "MD5": "0caacc314ee6e15a6599ebb0cd61962e"
+          }
+        },
+        {
           "id": "net.caffeinemc.mods:sodium:0.9.1+mc26.1.2@jar",
           "name": "Sodium",
           "type": "FabricMod",
@@ -137,6 +157,16 @@
             "size": 1889595,
             "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/sodium-fabric-0.9.1+mc26.1.2.jar",
             "MD5": "f173cec7478bd6ea8b39ab3fbc769a3b"
+          }
+        },
+        {
+          "id": "org.example.hoon:squirrelboss:1.0-SNAPSHOT@jar",
+          "name": "SquirrelBoss",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 872613,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/SquirrelBoss-1.0-SNAPSHOT.jar",
+            "MD5": "476d6f6dcdd26214922088f484fed380"
           }
         },
         {
