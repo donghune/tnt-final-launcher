@@ -120,6 +120,26 @@
           }
         },
         {
+          "id": "generated.fabricmod:iris:1.11.2+mc26.1.2@jar",
+          "name": "Iris",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 2815786,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/iris-fabric-1.11.2+mc26.1.2.jar",
+            "MD5": "b77a29f6d2b8dfb067a20b85e6bc7a37"
+          }
+        },
+        {
+          "id": "net.caffeinemc.mods:sodium:0.9.1+mc26.1.2@jar",
+          "name": "Sodium",
+          "type": "FabricMod",
+          "artifact": {
+            "size": 1889595,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/sodium-fabric-0.9.1+mc26.1.2.jar",
+            "MD5": "f173cec7478bd6ea8b39ab3fbc769a3b"
+          }
+        },
+        {
           "id": "kr.donghune.tntgame:tnt_game_client:1.0-SNAPSHOT@jar",
           "name": "TNT Game Client",
           "type": "FabricMod",
@@ -127,6 +147,39 @@
             "size": 33143,
             "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/tnt_game_client-1.0-SNAPSHOT.jar",
             "MD5": "a98decd8e3a04a02bf26eaa4887c03f7"
+          }
+        },
+        {
+          "id": "iris.properties",
+          "name": "iris.properties",
+          "type": "File",
+          "artifact": {
+            "size": 245,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/files/config/iris.properties",
+            "MD5": "1b7ffb567a1744c36e23eab98be12a94",
+            "path": "config/iris.properties"
+          }
+        },
+        {
+          "id": "optionsshaders.txt",
+          "name": "optionsshaders.txt",
+          "type": "File",
+          "artifact": {
+            "size": 41,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/files/optionsshaders.txt",
+            "MD5": "5407dd09607663b2d41ee66da7073fae",
+            "path": "optionsshaders.txt"
+          }
+        },
+        {
+          "id": "ComplementaryUnbound_r5.9.zip",
+          "name": "ComplementaryUnbound_r5.9.zip",
+          "type": "File",
+          "artifact": {
+            "size": 552453,
+            "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/files/shaderpacks/ComplementaryUnbound_r5.9.zip",
+            "MD5": "566f4c03252a950e8b74bede9e684827",
+            "path": "shaderpacks/ComplementaryUnbound_r5.9.zip"
           }
         }
       ]
