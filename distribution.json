@@ -174,9 +174,9 @@
           "name": "TNT Game Client",
           "type": "FabricMod",
           "artifact": {
-            "size": 678613,
+            "size": 679022,
             "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/tnt_game_client-1.0-SNAPSHOT.jar",
-            "MD5": "acf8986be5950f29532b6e1c5d812bb5"
+            "MD5": "40ff09ebc6d0e2cd50df2cd25f5df058"
           }
         },
         {
