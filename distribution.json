@@ -144,9 +144,9 @@
           "name": "RabbitBoss",
           "type": "FabricMod",
           "artifact": {
-            "size": 931831,
+            "size": 936803,
             "url": "https://raw.githubusercontent.com/donghune/tnt-final-launcher/main/servers/tnt-26.1.2/fabricmods/required/RabbitBoss-26.1.2-1.0-26.1.2.jar",
-            "MD5": "0caacc314ee6e15a6599ebb0cd61962e"
+            "MD5": "5008ae937193adb99fd62847c12e8347"
           }
         },
         {
